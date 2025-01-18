@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart Plant: Cultivate, Connect, and Care for your plants with our innovative solutions.">
+    <meta name="keywords" content="Smart Plant, technology, agriculture, IoT, plant care, smart garden, cultivate, connect, care">
+    <meta name="author" content="Smart Plan Pro">
+    <meta property="og:title" content="Smart Plant">
+    <meta property="og:description" content="Cultivate, Connect, and Care with Smart Plant. Join us as we revolutionize plant care with smart technology.">
+    <meta property="og:image" content="Icons/Logo light.svg">
+    <meta property="og:url" content="https://smart-plan.pro">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smart Plant">
+    <meta name="twitter:description" content="Cultivate, Connect, and Care with Smart Plant. Join us as we revolutionize plant care with smart technology.">
+    <meta name="twitter:image" content="Icons/Logo light.svg">
+
+    <title>Smart Plant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQC8PFWEW9"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YQC8PFWEW9');
+    </script>
+
+    <style>
+        body {
+            background-color: #3A3A3A;
+            color: #EAE6DA;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Audiowide', cursive;
+            font-size: 5em;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: 'Audiowide', cursive;
+            font-size: 2.4em;
+            margin: 10px 0;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .stealth-message {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            margin-top: 100px;
+        }
+
+        .counter {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 4em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .logo {
+                width: 250px;
+            }
+
+            .stealth-message {
+                font-size: 1.2em;
+                margin-top: 50px;
+            }
+
+            .counter {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 3.5em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .logo {
+                width: 200px;
+            }
+
+            .stealth-message {
+                font-size: 1.1em;
+                margin-top: 30px;
+            }
+
+            .counter {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="Icons/Logo light.svg" alt="Smart Plant Logo" class="logo">
+    <h1>Smart Plant</h1>
+    <h2>Cultivate | Connect | Care</h2>
+    <div id="stealth-message" class="stealth-message">Coming out of Stealth mode in </div>
+    <div id="countdown" class="counter"></div>
+
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date('February 28, 2025 00:00:00').getTime();
+            const currentDate = new Date().getTime();
+            const timeRemaining = targetDate - currentDate;
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            if (timeRemaining <= 0) {
+                document.getElementById('countdown').innerHTML = "Event Started!";
+            } else {
+                document.getElementById('countdown').innerHTML = `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
+</body>
+</html>
